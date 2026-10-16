@@ -1,0 +1,44 @@
+{
+  "name": "poker-online",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "typecheck": "tsc -b && tsc -p server/tsconfig.json",
+    "admin-hash": "node scripts/admin-hash.mjs",
+    "dev:online": "vite --host --mode online",
+    "build:online": "tsc -b && vite build --mode online",
+    "server": "tsx watch server/index.ts",
+    "build:server": "tsc -p server/tsconfig.json && node scripts/build-server.mjs",
+    "start": "node dist-server/index.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "description": "多人在线扑克牌游戏：跑得快 / 斗地主，AI 补位、快捷聊天与内容审核、后台管理",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WENGENG-boop/poker-online.git"
+  }
+}
